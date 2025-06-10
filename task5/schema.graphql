@@ -1,0 +1,28 @@
+type Query {
+  client(id: ID!): Client
+}
+
+type Client {
+  id: ID!
+  fullName: String
+  birthDate: String
+  contacts: [Contact]
+  documents: [Document]
+  relatives: [Relative]
+}
+
+type Contact {
+  type: String
+  value: String
+}
+
+type Document {
+  type: String
+  number: String
+  issuedBy: String
+}
+
+type Relative {
+  name: String
+  relation: String
+}
